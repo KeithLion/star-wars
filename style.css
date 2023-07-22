@@ -1,7 +1,19 @@
-body{
+main{
     text-align: center;
 }
 
 ul{
     list-style: none;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+#characterInfo{
+    margin: 4rem;
+}
+
+input{
+    max-width: 15rem;
 }
