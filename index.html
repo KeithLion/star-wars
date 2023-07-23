@@ -16,30 +16,47 @@
     <!-- <p>have two tabs, one with the charater description and the other with the film information.
         if there is more that one film for a character have the file information scroll.
     </p> -->
-    <form id="input">
-        <input type="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        <button type="submit" class="btn btn-dark">Dark</button>
-    </form>
-    
+    <div class="dropdown">
+<select name="characterList">
 
+    <option value="" id="characterList"></option>
+ 
+</select>
+      </div>
+    
+<div class="container">
+    
     <div id="characterInfo">
         <ul>
-            <li><p>Name</p></li>
-            <li><p>Gender</p></li>
-            <li><p>Height</p></li>
-            <li><p>Eye Color</p></li>
-            <li><p>Hair Color</p></li>
-            <li><p>Skin Color</p></li>
-            <li><p>Mass</p></li>
-            <li><p>Homeworld</p></li>
-            <li><p>Species</p></li>
-            <li><p>Vehichles</p></li>
-            <li><p>Starships</p></li>
-            <li><p>Birth Year</p></li>
+            <!-- Name -->
+            <li><p id="name"></p></li>
+            <!-- Gender -->
+            <li><p id="gender"></p></li>
+            <!-- height -->
+            <li><p id="height"></p></li>
+            <!-- eye color -->
+            <li><p id="eyeColor"></p></li>
+            <!-- hair color -->
+            <li><p id="hairColor"></p></li>
+            <!-- skin color -->
+            <li><p id="skinColor"></p></li>
+            <!-- mass -->
+            <li><p id="mass"></p></li>
+            <!-- homeWorld -->
+            <li><p id="homeWorld"></p></li>
+            <!-- species -->
+            <li><p id="species"></p></li>
+            <!-- vehichle -->
+            <li><p id="vehichle"></p></li>
+            <!-- starship -->
+            <li><p id="starship"></p></li>
+            <!-- birth year -->
+            <li><p id="birthYear"></p></li>
             <a href="films.html"><button type="button" class="btn btn-primary">Films</button></a>
         </ul>
     </div>
+</div>
 </main>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
