@@ -6,11 +6,13 @@ fetch("https://www.swapi.tech/api/people/1/")
     .then(response => response.json())
     .then(data => {
         const name = data.result.properties.name;
+        const gender= data.result.properties.gender;
 
 
         resultElement.innerHTML = `
             <ul>
             <li><p>${name}</p></li>
+            <li><p>${gender}</p></li>
             </ul>
         `;
 })
@@ -23,10 +25,6 @@ fetch("https://www.swapi.tech/api/people/1/")
 //     console.log(people.result.properties.name)
 
 
-// fetch("https://www.swapi.tech/api/people/1/")
-// .then(res => res.json())
-// .then(data => console.log(data.result.properties.name))
-// .catch(err => console.error(err))
 
 
 // fetch('https://www.swapi.tech/api/films/1')
@@ -41,3 +39,12 @@ fetch("https://www.swapi.tech/api/people/1/")
 // .then(data => console.log(data))
 // .catch(err => console.error(err))
 // // async function getCharacter()
+
+
+
+
+
+// fetch("https://www.swapi.tech/api/people/1/")
+// .then(res => res.json())
+// .then(data => console.log(data.result.properties.name))
+// .catch(err => console.error(err))
