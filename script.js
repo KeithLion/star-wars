@@ -1,48 +1,41 @@
-fetch("https://www.swapi.tech/api/people")
-.then(data => {
-    return data.json();
+const resultElement = document.getElementById('characterInfo')
+
+
+
+fetch("https://www.swapi.tech/api/people/1/")
+    .then(response => response.json())
+    .then(data => {
+        const name = data.result.properties.name;
+
+
+        resultElement.innerHTML = `
+            <ul>
+            <li><p>${name}</p></li>
+            </ul>
+        `;
 })
-.then(people=>{
-    console.log(people.result.properties.name)
+    .catch(error => {
+        console.error('err',error)
 })
 
 
-// function dropDown(){
-//     let names = "";
-//     let characterName = people.result.properties.name;
-//     for (let i = 0; i <characterName; i++);{
-//         names += characterName[i];
-//     }
-//     document.getElementById('characterList').innerHTML = names
-// }
-
-// function characterInfo(output){
-//     console.log(output.data)
-//     let name = document.querySelector('#name');
-//     name.innerHtml = `${people.result.properties.name}`
-// }
+// .then(people=>{
+//     console.log(people.result.properties.name)
 
 
-// res.json())
-// .then(data => console.log(data))
+// fetch("https://www.swapi.tech/api/people/1/")
+// .then(res => res.json())
+// .then(data => console.log(data.result.properties.name))
 // .catch(err => console.error(err))
 
-// function dropDown(list)
-//     console.log(list.data)
 
-//     let url = 'https://www.swapi.tech/api/people'
-
-
-
-
-
-fetch('https://www.swapi.tech/api/films')
-.then(data => {
-    return data.json();
-})
-.then(films =>{
-    console.log(films.result.properties.title)
-})
+// fetch('https://www.swapi.tech/api/films/1')
+// .then(data => {
+//     return data.json();
+// })
+// .then(films =>{
+//     console.log(films.result.properties.title)
+// })
 // fetch("https://www.swapi.tech/api/films")
 // .then(res => res.json())
 // .then(data => console.log(data))
